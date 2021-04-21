@@ -1,0 +1,15 @@
+{
+    
+    "files.associations": {
+    
+        "iostream": "cpp"
+    },
+    "files.exclude": {
+    
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "python.pythonPath": "C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.7_3.7.2544.0_x64__qbz5n2kfra8p0\\python.exe"
+}
