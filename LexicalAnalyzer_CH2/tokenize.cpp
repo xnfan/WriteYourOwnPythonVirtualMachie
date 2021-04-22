@@ -1,9 +1,10 @@
 # include <stdio.h>
 # include <iostream>
-using namespace std;
+# include <unistd.h>
 
 # define INIT 0
 # define NUM 1
+
 
 int main(){
     FILE * fp = fopen("test_expression.txt", "r");
@@ -33,6 +34,8 @@ int main(){
     }
 
     fclose(fp);
+    sleep(10);
+    
     return 0;
 
 }
