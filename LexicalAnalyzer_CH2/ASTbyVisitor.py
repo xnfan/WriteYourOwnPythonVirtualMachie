@@ -1,5 +1,7 @@
 import sys, tokenize
 from tokenize_and_compute import current, next
+
+# like AST.py by using the Visitor Pattern
 class ConstNode():
     def __init__(self, value):
         self.value = value
