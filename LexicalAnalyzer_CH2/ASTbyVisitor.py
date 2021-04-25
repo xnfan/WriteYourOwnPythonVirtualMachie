@@ -111,8 +111,3 @@ if __name__ == '__main__':
         vs = Visitor()
         AST = expr(tk)
         print("FINAL VALUE %d" % vs.visit(AST))
-        
-
-                
-
-    
