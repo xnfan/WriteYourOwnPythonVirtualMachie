@@ -17,7 +17,7 @@ class BufferedInputStream{
             fread(szBuffer, BUFFER_LEN * sizeof(char), 1, fp);
             index = 0;
         }
-
+ 
         char read(){
             if (index < BUFFER_LEN){
                 return szBuffer[index++];
