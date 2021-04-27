@@ -28,7 +28,7 @@ void ArrayList<T>::insert(int index, T t){
 
 template <typename T>
 void ArrayList<T>::expand(){
-    T * new_array = new T[_lengh<<1];
+    T * new_array = new T[_length<<1];
     for (int i = 0; i < _length; i++){
         new_array[i] = _array[i];
     }
