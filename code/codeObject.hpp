@@ -1,15 +1,15 @@
 # ifndef CODE_OBJECT_HPP
-# define CODE_OBJECT_CPP
+# define CODE_OBJECT_HPP
 
-# include "hiObject.hpp"
+# include "object/hiObject.hpp"
 
 class HiString;
 
 template <typename T>
 class ArrayList;
 
-class CodeObject{
-    private:
+class CodeObject : public HiObject{
+    public:
         int _argcount;
         int _nlocals;
         int _stack_size;
@@ -28,7 +28,7 @@ class CodeObject{
 
         int _lineno;
         HiString * _notable;
-
+        
         CodeObject(int argcount, int nlocals, int stacksize, int flag, HiString * bytecode,
             ArrayList<HiObject *> * consts, ArrayList<HiObject *> * names,
             ArrayList<HiObject *> * varnames,

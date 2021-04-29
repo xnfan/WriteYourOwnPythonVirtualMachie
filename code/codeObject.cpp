@@ -1,5 +1,5 @@
-# include "codeObject.hpp"
-# include "hiString.hpp"
+# include "code/codeObject.hpp"
+# include "object/hiString.hpp"
 
 CodeObject::CodeObject(int argcount, int nlocals, int stacksize, int flag, HiString * bytecode,
             ArrayList<HiObject *> * consts, ArrayList<HiObject *> * names,

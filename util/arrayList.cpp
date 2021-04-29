@@ -1,4 +1,4 @@
-# include "arrayList.hpp"
+# include "util/arrayList.hpp"
 # include <stdio.h>
 
 template <typename T>
@@ -64,3 +64,9 @@ template <typename T>
 T ArrayList<T>::pop(){
     return _array[--_size];    
 }
+
+class HiObject;
+template class ArrayList< HiObject * >;
+
+class HiString;
+template class ArrayList< HiString * >;

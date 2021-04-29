@@ -1,7 +1,8 @@
 # ifndef _HI_STRING_HPP
 # define _HI_STRING_HPP
 
-# include "hiObject.hpp"
+# include "object/hiObject.hpp"
+# include <string.h>
 
 class HiString : public HiObject{
     private:

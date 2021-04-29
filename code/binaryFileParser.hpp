@@ -1,19 +1,20 @@
 # ifndef BINARY_FILE_PARSER_HPP
 # define BINARY_FILE_PARSER_HPP
 
-# include "bufferedInputStream.hpp"
-# include "arrayList.hpp"
-# include "hiString.hpp"
-# include "hiObject.hpp"
-# include "hiInteger.hpp"
-# include "codeObject.hpp"
+# include "util/bufferedInputStream.hpp"
+# include "util/arrayList.hpp"
+# include "object/hiObject.hpp"
+# include "object/hiString.hpp"
+# include "object/hiInteger.hpp"
+# include "code/codeObject.hpp"
 
 class BinaryFileParser{
     private:
         BufferedInputStream * file_stream;
+        ArrayList<HiString*> _string_table;
 
     public:
-        BinaryFileParser(BinaryFileParser * stream);
+        BinaryFileParser(BufferedInputStream * stream);
 
         CodeObject * parse();
         CodeObject * get_code_object();
