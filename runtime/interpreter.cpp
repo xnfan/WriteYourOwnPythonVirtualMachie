@@ -9,7 +9,6 @@
 void Interpreter::run(CodeObject * codes){
     int pc = 0;
     int code_length = codes -> _bytecodes -> length();
-    printf(codes -> _bytecodes -> value());
 
     _stack = new ArrayList<HiObject *>(codes -> _stack_size);
     _consts = codes -> _consts;
@@ -30,7 +29,6 @@ void Interpreter::run(CodeObject * codes){
         switch(op_code) {
             case ByteCode::LOAD_CONST:
                 _stack -> add(_consts -> get(op_arg));
-                _consts -> get(op_arg)->print();
                 break;
             case ByteCode::PRINT_ITEM:
                 v = _stack -> pop();
@@ -42,8 +40,6 @@ void Interpreter::run(CodeObject * codes){
             case ByteCode::BINARY_ADD:
                 v = _stack -> pop();
                 w = _stack -> pop();
-                v->print();
-                w->print();
                 _stack -> add(w -> add(v));
                 break;
             case ByteCode::RETURN_VALUE:

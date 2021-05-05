@@ -51,7 +51,7 @@ CodeObject * BinaryFileParser::get_code_object() {
 }
 
 HiString * BinaryFileParser::get_string(){
-    int length = file_stream -> read();
+    int length = file_stream -> read_int();
     char * str_value = new char[length];
 
     for (int i = 0; i < length; i++){
@@ -88,7 +88,6 @@ HiString * BinaryFileParser::get_file_name(){
 
 HiString * BinaryFileParser::get_byte_codes(){
     assert(file_stream->read() == 's');
-
     return get_string();
 }
 
