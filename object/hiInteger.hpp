@@ -10,6 +10,8 @@ class HiInteger : public HiObject{
     public:
         HiInteger(int x) { _value = x; }
         int value() { return _value; }
+        HiObject * add(HiObject *);
+        void print();
 };
 
 # endif
