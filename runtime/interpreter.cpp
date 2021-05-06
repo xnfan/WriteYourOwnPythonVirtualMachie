@@ -17,7 +17,7 @@ void Interpreter::run(CodeObject * codes){
     _stack = new ArrayList<HiObject *>(codes -> _stack_size);
     _consts = codes -> _consts;
 
-    Universe::genesis(); // initialize the HiTrue, HiFalse, HiNone;
+    Universe::genesis(); // initialize the HiTrue, HiFalse, HiNone, may need to delete sometime;
 
     while (pc < code_length){
         unsigned char op_code = codes -> _bytecodes -> value()[pc++];
