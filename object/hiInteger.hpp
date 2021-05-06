@@ -12,6 +12,13 @@ class HiInteger : public HiObject{
         int value() { return _value; }
         HiObject * add(HiObject *);
         void print();
+
+        HiObject * greater(HiObject *);
+        HiObject * less(HiObject *);
+        HiObject * equal(HiObject *);
+        HiObject * not_equal(HiObject *);
+        HiObject * ge(HiObject *);
+        HiObject * le(HiObject *);
 };
 
 # endif

@@ -1,4 +1,5 @@
 # include "object/hiInteger.hpp"
+# include "runtime/universe.hpp"
 
 # include <stdio.h>
 
@@ -10,3 +11,58 @@ void HiInteger::print(){
 HiObject * HiInteger::add(HiObject * x){
     return new HiInteger(_value + ((HiInteger *) x) -> _value);
 }
+
+HiObject * HiInteger::greater(HiObject * x){
+    if (_value > ((HiInteger *)x) -> _value){
+        return Universe::HiTrue;
+    }
+    else{
+        return Universe::HiFalse;
+    }
+}
+
+HiObject * HiInteger::less(HiObject * x){
+    if (_value < ((HiInteger *)x) -> _value){
+        return Universe::HiTrue;
+    }
+    else{
+        return Universe::HiFalse;
+    }
+}
+
+HiObject * HiInteger::equal(HiObject * x){
+    if (_value == ((HiInteger *)x) -> _value){
+        return Universe::HiTrue;
+    }
+    else{
+        return Universe::HiFalse;
+    }
+}
+
+HiObject * HiInteger::not_equal(HiObject * x){
+    if (_value != ((HiInteger *)x) -> _value){
+        return Universe::HiTrue;
+    }
+    else{
+        return Universe::HiFalse;
+    }
+}
+
+HiObject * HiInteger::ge(HiObject * x){
+    if (_value >= ((HiInteger *)x) -> _value){
+        return Universe::HiTrue;
+    }
+    else{
+        return Universe::HiFalse;
+    }
+}
+
+HiObject * HiInteger::le(HiObject * x){
+    if (_value <= ((HiInteger *)x) -> _value){
+        return new HiInteger(1);
+    }
+    else{
+        return new HiInteger(0);
+    }
+}
+
